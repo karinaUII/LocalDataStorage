@@ -9,7 +9,6 @@ import com.example.localdatastorage.ui.view.BookScreen
 import com.example.localdatastorage.ui.viewmodel.BookViewModel
 
 class MainActivity : ComponentActivity() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
