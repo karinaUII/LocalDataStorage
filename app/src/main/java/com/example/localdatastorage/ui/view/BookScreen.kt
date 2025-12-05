@@ -44,8 +44,10 @@ fun BookScreen(viewModel: BookViewModel) {
 
         Button(
             onClick = {
-                if (title.isNotEmpty() && author.isNotEmpty() && year.isNotEmpty()) {
-                    viewModel.addBook(title, author, year.toInt())
+                val yearInt = year.toIntOrNull()
+
+                if (title.isNotEmpty() && author.isNotEmpty() && yearInt != null) {
+                    viewModel.addBook(title, author, yearInt)
                     title = ""
                     author = ""
                     year = ""
