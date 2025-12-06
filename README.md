@@ -7,7 +7,7 @@
 <br><br>
 **List Data Awal di Database**
 <p align="left">
-  <img src="ss_4.png" alt="Tampilan list data awal" width="400">
+  <img src="ss_4.png" alt="Tampilan list data awal" width="800">
 </p>
 
 <br><br>
