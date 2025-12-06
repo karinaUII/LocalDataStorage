@@ -1,5 +1,5 @@
 
-**Anggota Kelompok**
+**Anggota Kelompok SNAP**
 * **Nafis Ilyas Maulana (235223014)**
 * **Karina (23523038)**
 * **Anindya Putri Aisyah (23523136)**
