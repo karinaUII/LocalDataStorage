@@ -1,12 +1,23 @@
-Nafis Ilyas Maulana (235223014)
-Karina (23523038)
-Anindya Putri Aisyah (23523136)
 
-- Tampilan list data awal
-![Tampilan list data awal](ss_1.png)
+**Anggota Kelompok**
+* **Nafis Ilyas Maulana (235223014)**
+* **Karina (23523038)**
+* **Anindya Putri Aisyah (23523136)**
+  
+<br><br>
+**Tampilan List Data Awal**
+<p align="left">
+  <img src="ss_1.png" alt="Tampilan list data awal" width="300">
+</p>
 
-- Tampilan form saat diisi
-![Tampilan list data awal](ss_2.png)
+<br><br>
+**Tampilan Form Saat Diisi**
+<p align="left">
+  <img src="ss_2.png" alt="Tampilan form saat diisi" width="300">
+</p>
 
-- Tampilan list data yang sudah ditambah data baru tanpa refresh
-![Tampilan list data awal](ss_3.png)
+<br><br>
+**Tampilan List Data Setelah Menambah Data (Tanpa Refresh)**
+<p align="left">
+  <img src="ss_3.png" alt="Tampilan list data setelah update" width="300">
+</p>
