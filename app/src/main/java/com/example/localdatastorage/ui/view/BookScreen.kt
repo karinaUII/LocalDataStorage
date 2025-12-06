@@ -19,56 +19,71 @@ fun BookScreen(viewModel: BookViewModel) {
     var author by remember { mutableStateOf("") }
     var year by remember { mutableStateOf("") }
 
-    Column(modifier = Modifier.padding(16.dp)) {
-
-        OutlinedTextField(
-            value = title,
-            onValueChange = { title = it },
-            label = { Text("Judul Buku") },
-            modifier = Modifier.fillMaxWidth()
-        )
-
-        OutlinedTextField(
-            value = author,
-            onValueChange = { author = it },
-            label = { Text("Penulis") },
-            modifier = Modifier.fillMaxWidth().padding(top = 8.dp)
-        )
-
-        OutlinedTextField(
-            value = year,
-            onValueChange = { year = it },
-            label = { Text("Tahun Terbit") },
-            modifier = Modifier.fillMaxWidth().padding(top = 8.dp)
-        )
-
-        Button(
-            onClick = {
-                val yearInt = year.toIntOrNull()
-
-                if (title.isNotEmpty() && author.isNotEmpty() && yearInt != null) {
-                    viewModel.addBook(title, author, yearInt)
-                    title = ""
-                    author = ""
-                    year = ""
-                }
-            },
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(top = 12.dp)
-        ) {
-            Text("Save / Add Book")
+    Scaffold(
+        topBar = {
+            TopAppBar(
+                title = { Text("Daftar Buku") }
+            )
         }
+    ) { innerPadding ->
+        Column(
+            modifier = Modifier
+                .padding(innerPadding)
+                .padding(16.dp)
+        ) {
 
-        Spacer(modifier = Modifier.height(16.dp))
+            OutlinedTextField(
+                value = title,
+                onValueChange = { title = it },
+                label = { Text("Judul Buku") },
+                modifier = Modifier.fillMaxWidth()
+            )
 
-        LazyColumn {
-            items(bookList) { book ->
-                Text(
-                    "${book.title} - ${book.author} (${book.year})",
-                    modifier = Modifier.padding(8.dp)
-                )
-                Divider()
+            OutlinedTextField(
+                value = author,
+                onValueChange = { author = it },
+                label = { Text("Penulis") },
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(top = 8.dp)
+            )
+
+            OutlinedTextField(
+                value = year,
+                onValueChange = { year = it },
+                label = { Text("Tahun Terbit") },
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(top = 8.dp)
+            )
+
+            Button(
+                onClick = {
+                    val yearInt = year.toIntOrNull()
+                    if (title.isNotEmpty() && author.isNotEmpty() && yearInt != null) {
+                        viewModel.addBook(title, author, yearInt)
+                        title = ""
+                        author = ""
+                        year = ""
+                    }
+                },
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(top = 12.dp)
+            ) {
+                Text("Save Book")
+            }
+
+            Spacer(modifier = Modifier.height(16.dp))
+
+            LazyColumn {
+                items(bookList) { book ->
+                    Text(
+                        "${book.title} - ${book.author} (${book.year})",
+                        modifier = Modifier.padding(8.dp)
+                    )
+                    Divider()
+                }
             }
         }
     }
